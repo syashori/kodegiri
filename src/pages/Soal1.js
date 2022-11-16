@@ -1,5 +1,7 @@
 import {useEffect, useState} from 'react'
 
+import '../App.css';
+
 const App = () => {
   const [kelipatan, setKelipatan] = useState([]);
   const [fibonaci, setFibonaci] = useState([0,1]);
@@ -67,6 +69,8 @@ const App = () => {
         break;
       case 9:
         huruf = "Sembilan";
+        break;
+      default:
     }
     return huruf;
   }
@@ -99,6 +103,8 @@ const App = () => {
         break;
       case 9:
         huruf = "Sembilan Belas";
+        break;
+      default:
     }
     return huruf;
   }
@@ -159,11 +165,11 @@ const App = () => {
           <h5>PseudoCode : TES KEMAMPUAN PROGRAMMING</h5>
           Soal No 1
           {kelipatan.map((item, index) => (
-            <div key={index}>{item} => {valueKelipatan(item)}</div>
+            <div key={index} > {item} = {valueKelipatan(item)}</div>
           ))}
           <p>Soal No 2</p>
           {fibonaci.map((item, index) => (
-            <a key={index}>{item} </a>
+            <a href="http" key={index}>{item} </a>
           ))}
           <p>Soal No 3</p>
           <input type="number" onChange={(e)=>printX(e.target.value)}/>
